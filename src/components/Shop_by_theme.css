@@ -1,0 +1,113 @@
+.themes-section {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.themes-title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.red-underline {
+  width: 90px;
+  height: 3px;
+  background-color: #d32f2f;
+  margin: 0 auto 12px auto;
+  border-radius: 4px;
+}
+
+.themes-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* === Scrollable Container === */
+
+.themes-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* only 4 images visible */
+}
+
+.themes-scroll {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 24px;
+  width: fit-content;
+}
+
+
+.themes-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-card {
+  flex: 0 0 auto;
+  width: 230px;
+  border-radius: 18px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.theme-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.theme-name {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #222;
+  font-size: 15px;
+}
+
+/* === Navigation Buttons === */
+.nav-btn {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  color: #222;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.nav-btn:hover {
+  border-color: #d32f2f;
+  color: #d32f2f;
+}
+
+.nav-btn.left {
+  left: -10px;
+}
+
+.nav-btn.right {
+  right: -10px;
+}

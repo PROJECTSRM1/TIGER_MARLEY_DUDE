@@ -1,0 +1,179 @@
+/* === Official Merchandise === */
+.official-edition-container {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.official-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.red-underline {
+  width: 120px;
+  height: 4px;
+  background-color: #e30613;
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+.official-text {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.merch-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.merch-card {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.merch-card:hover {
+  transform: scale(1.05);
+}
+
+.merch-image {
+  width: 320px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Clearance Red Banner === */
+.clearance-section {
+  background-color: #c00;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0 60px;
+  margin-top: 60px;
+  border-radius: 12px;
+}
+
+.clearance-subtitle {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.clearance-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0 20px;
+}
+
+.size-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  background-color: #e30613;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.size-btn.active {
+  background-color: #222;
+}
+
+.size-btn:hover {
+  background-color: #111;
+}
+
+/* === Promo Wrapper (Separate from Red Section) === */
+.promo-wrapper {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.promo-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.promo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #f3f3f3, #fafafa);
+  border-radius: 15px;
+  width: 500px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.promo-content {
+  text-align: left;
+}
+
+.promo-card h3 {
+  font-size: 22px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  color: #444;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.promo-btn {
+  background-color: #e30613;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.promo-btn:hover {
+  background-color: #111;
+}
+
+.promo-img {
+  width: 150px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-section {
+    flex-direction: column;
+  }
+
+  .promo-card {
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .promo-content {
+    text-align: center;
+  }
+
+  .promo-img {
+    margin-top: 15px;
+  }
+}

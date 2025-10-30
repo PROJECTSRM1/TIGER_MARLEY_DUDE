@@ -1,0 +1,30 @@
+/* Top Offer Bar Styles */
+.top-offer-bar {
+  background-color: #b11111; /* red background */
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.top-offer-bar p {
+  margin: 0;
+}
+
+.highlight-number {
+  color: #00ffff; /* light blue for emoji part */
+}
+
+.highlight-offer {
+  color: #ffeb3b; /* yellow for offer percentage */
+  font-weight: 700;
+}
+
+.highlight-code {
+  color: #ffeb3b; /* yellow for code */
+  font-weight: 800;
+  margin-left: 2px;
+}
