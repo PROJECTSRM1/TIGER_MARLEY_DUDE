@@ -1,0 +1,71 @@
+.orders-page {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.orders-page h1 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.orders-page p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fdfdfd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.orders-table thead {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #fce8f1;
+  transition: 0.3s;
+}
+
+.status {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.delivered {
+  color: #28a745;
+}
+
+.status.shipped {
+  color: #007bff;
+}
+
+.status.pending {
+  color: #ff9800;
+}
+
+.status.cancelled {
+  color: #dc3545;
+}
