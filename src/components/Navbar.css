@@ -1,0 +1,719 @@
+/* 🌟 Navbar Header */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 35px;
+  z-index: 10;
+}
+
+.logo h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b11111;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: black;
+  font-weight: 800;
+}
+
+/* 🌟 Icons Section */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  right: 60px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #333;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  color: #b11111;
+}
+
+.icon-badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #b11111;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+/* ======================
+   🔍 Search Overlay Panel
+   ====================== */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+  transform: translateX(0);
+  animation: slideIn 0.3s ease forwards;
+  z-index: 999;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.search-panel {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 10px;
+}
+
+.search-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.close-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  color: #333;
+}
+
+.close-icon:hover {
+  color: #b11111;
+}
+
+/* Dropdown */
+.search-dropdown {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.search-dropdown:hover {
+  border-color: #b11111;
+}
+
+/* Search Input */
+.search-input-box {
+  position: relative;
+  margin-top: 15px;
+}
+
+.search-input-box input {
+  width: 100%;
+  padding: 10px 35px 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input-box input:focus {
+  border-color: #b11111;
+}
+
+.search-input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #555;
+}
+
+/* ======================
+   📦 Product Results
+   ====================== */
+.search-results {
+  margin-top: 20px;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.search-item:hover {
+  background-color: #f9f9f9;
+}
+
+.search-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.search-item h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.search-item p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.new-price {
+  color: #b11111;
+  font-weight: 600;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+/* Scrollbar */
+.search-overlay::-webkit-scrollbar {
+  width: 6px;
+}
+
+.search-overlay::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+
+/* ======================
+   🔐 Login Drawer (Right Side)
+   ====================== */
+
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* dim background */
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-drawer {
+  background: #fff;
+  width: 360px;
+  height: 100vh;
+  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.15);
+  animation: slideInLogin 0.3s ease forwards;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+@keyframes slideInLogin {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Header */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.login-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+.login-header .close-icon {
+  cursor: pointer;
+  color: #333;
+  width: 20px;
+  height: 20px;
+}
+
+.login-header .close-icon:hover {
+  color: #b11111;
+}
+
+/* Form Styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.login-form label span {
+  color: red;
+}
+
+.login-form input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.login-form input:focus {
+  border-color: #b11111;
+}
+
+/* Links */
+.forgot-password,
+.new-account {
+  font-size: 13px;
+  color: #333;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.forgot-password:hover,
+.new-account:hover {
+  color: #b11111;
+}
+
+/* Button */
+.login-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 10px 0 15px 0;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #000;
+}
+
+/* Scrollbar */
+.login-drawer::-webkit-scrollbar {
+  width: 6px;
+}
+.login-drawer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+/* ======================
+   🍔 MENU DRAWER STYLES
+   ====================== */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end; /* Drawer slides from right */
+  backdrop-filter: blur(2px);
+}
+
+/* Drawer */
+.menu-drawer {
+  background: #fff;
+  width: 360px;
+  height: 100vh;
+  box-shadow: -3px 0 12px rgba(0, 0, 0, 0.2);
+  animation: slideInMenuRight 0.35s ease forwards;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 10px 0 0 10px;
+}
+
+/* Slide Animation */
+@keyframes slideInMenuRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.menu-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #333;
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  color: #b11111;
+  transform: rotate(90deg);
+}
+
+/* Login/Register */
+.menu-login {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.menu-login a {
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-login a:hover {
+  color: #b11111;
+  text-decoration: underline;
+}
+
+/* Tabs */
+.menu-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0 12px 0;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.menu-tabs button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.menu-tabs button:hover {
+  color: #b11111;
+}
+
+.menu-tabs button.active {
+  color: #b11111;
+  border-bottom: 3px solid #b11111;
+}
+
+/* Content */
+.menu-content {
+  margin-top: 15px;
+  padding-bottom: 50px;
+}
+
+/* Section */
+.menu-section {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-section:last-child {
+  border-bottom: none;
+}
+
+.menu-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Tags */
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 2px 6px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tag.yellow {
+  background: #f7c948;
+}
+
+.tag.red {
+  background: #e53935;
+}
+
+.tag.orange {
+  background: #fb8c00;
+}
+
+.tag.blue {
+  background: #42a5f5;
+}
+
+/* 🌀 Anime Icons Grid */
+.anime-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.anime-item {
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.anime-item:hover {
+  transform: translateY(-3px);
+}
+
+.anime-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.anime-item p {
+  font-size: 12px;
+  color: #333;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* 🎯 Menu Items (for Women & Kids sections) */
+.menu-item,
+.menu-link,
+.age-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.menu-item:hover,
+.menu-link:hover,
+.age-item:hover {
+  background: #fafafa;
+  padding-left: 8px;
+  border-radius: 6px;
+}
+
+.menu-item i,
+.menu-link i,
+.age-item i {
+  width: 18px;
+  color: #b11111;
+}
+
+.menu-item p,
+.menu-link p,
+.age-item p {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 📧 Contact Section */
+.contact {
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.contact h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.contact-email {
+  color: #b11111;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar */
+.menu-drawer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-drawer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* ======================
+   👩 WOMEN STYLES
+   ====================== */
+.menu-drawer.women-mode .menu-header h3 {
+  color: #e91e63;
+}
+
+.menu-drawer.women-mode .menu-tabs button.active {
+  color: #e91e63;
+  border-bottom-color: #e91e63;
+}
+
+.menu-drawer.women-mode .tag.yellow {
+  background: #f48fb1;
+}
+
+.menu-drawer.women-mode .tag.red {
+  background: #ec407a;
+}
+
+.menu-drawer.women-mode .tag.orange {
+  background: #f06292;
+}
+
+.menu-drawer.women-mode .tag.blue {
+  background: #ba68c8;
+}
+
+/* ======================
+   🧒 KIDS STYLES
+   ====================== */
+.menu-drawer.kids-mode .menu-header h3 {
+  color: #4caf50;
+}
+
+.menu-drawer.kids-mode .menu-tabs button.active {
+  color: #4caf50;
+  border-bottom-color: #4caf50;
+}
+
+.menu-drawer.kids-mode .tag.yellow {
+  background: #ffd54f;
+}
+
+.menu-drawer.kids-mode .tag.red {
+  background: #ef5350;
+}
+
+.menu-drawer.kids-mode .tag.orange {
+  background: #ffb74d;
+}
+
+.menu-drawer.kids-mode .tag.blue {
+  background: #4fc3f7;
+}
+
+/* Responsive */
+@media (max-width: 420px) {
+  .menu-drawer {
+    width: 300px;
+    padding: 15px;
+  }
+
+  .anime-icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .anime-item img {
+    width: 42px;
+    height: 42px;
+  }
+}
