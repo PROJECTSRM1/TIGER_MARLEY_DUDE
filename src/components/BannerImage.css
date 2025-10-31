@@ -1,0 +1,48 @@
+.banner-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner-buttons {
+  position: absolute;
+  bottom: 20px; 
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Button Styles */
+.banner-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}
+
+.football-btn {
+  background-color: #e50914;
+}
+
+.motorsports-btn {
+  background-color: #111;
+}
