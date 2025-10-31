@@ -1,33 +1,34 @@
 .arrival-edition-container {
   text-align: center;
-  padding: 50px 0;
+  padding: 10px 0 30px 0; /* 🔽 Reduced top gap to 10px */
   background-color: #fff;
 }
 
+
 .arrival-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 10px;
 }
 
 .red-underline {
-  width: 80px;
-  height: 4px;
+  width: 70px;
+  height: 3px;
   background-color: #e63946;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 15px auto;
   border-radius: 2px;
 }
 
 .arrival-text {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .carousel-wrapper {
   position: relative;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -38,7 +39,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   gap: 10px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -46,61 +47,64 @@
 }
 
 .product-card {
-  flex: 0 0 calc(25% - 20px); /* 🟢 show exactly 4 per row */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  flex: 0 0 calc(25% - 15px); /* 4 items per row */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   background-color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
   transition: transform 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .product-card img {
-  width: 80%;
-  height: 250px;
+  width: 70%;
+  height: 180px; /* Reduced height */
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .product-card h3 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #333;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .price {
   color: #e63946;
   font-weight: 600;
-  margin-top: 5px;
+  margin-top: 3px;
+  font-size: 0.9rem;
 }
 
 .scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #e63946;
-  color: white;
+  background: rgba(230, 57, 70, 0.2); 
+  color: #e63946;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   z-index: 10;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .scroll-btn.left {
-  left: 0;
+  left: 5px;
 }
 
 .scroll-btn.right {
-  right: 0;
+  right: 5px;
 }
 
 .scroll-btn:hover {
-  background: #b11111;
+  background: rgba(230, 57, 70, 0.4);
+  transform: translateY(-50%) scale(1.1);
 }

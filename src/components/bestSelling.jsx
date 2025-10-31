@@ -195,7 +195,6 @@ const BestSelling = () => {
     <section className="bestselling-section">
       <h2 className="bestselling-title">#BestSelling Goodies</h2>
 
-      {/* Tabs */}
       <div className="bestselling-tabs">
         {Object.keys(products).map((tab) => (
           <span
@@ -208,7 +207,6 @@ const BestSelling = () => {
         ))}
       </div>
 
-      {/* Product Grid */}
       <div className="bestselling-grid">
         {products[activeTab].map((item) => (
           <a href={item.url} key={item.id} className="bestselling-card">

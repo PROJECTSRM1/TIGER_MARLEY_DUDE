@@ -28,8 +28,6 @@
   font-style: italic;
 }
 
-/* === Scrollable Container === */
-
 .themes-container {
   position: relative;
   width: 90%;
@@ -37,7 +35,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* only 4 images visible */
+  overflow: hidden;
 }
 
 .themes-scroll {

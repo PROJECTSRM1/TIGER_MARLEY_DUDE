@@ -1,99 +1,99 @@
 .product-section {
   text-align: center;
-  margin: 60px auto;
+  margin: 50px auto;
   padding: 0 40px;
-  max-width: 1300px; /* Keeps layout centered and full width */
+  max-width: 1300px;
 }
 
-
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 
 .product-card {
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 16px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 330px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
-
 
 .product-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
-
 
 .image-wrapper {
   position: relative;
-}
 
+  overflow: hidden;
+}
 
 .image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 110%; 
+  margin-left: -5%;
+  border-radius: 12px 12px 0 0;
 }
+
 
 
 .overlay-title {
   position: absolute;
   top: 20px;
-  left: 30px;
-  font-size: 70px;
+  left: 20px;
+  font-size: 80px;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.18);
+  text-transform: uppercase;
   pointer-events: none;
+  letter-spacing: 2px;
 }
 
 
 .button-row {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 15px;
+  padding: 18px 0 25px 0;
   background-color: #fff;
 }
-
 
 .category-btn {
   background-color: #e30613;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 10px 28px;
+  border-radius: 6px;
+  padding: 10px 26px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
   transition: all 0.3s;
 }
 
-
 .category-btn:hover {
   background-color: #c40511;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 
-/* Responsive: 2 per row on tablets */
 @media (max-width: 992px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .product-card {
+    width: 60%;
   }
 }
 
-
-/* Responsive: 1 per row on mobile */
 @media (max-width: 600px) {
   .product-grid {
-    grid-template-columns: 1fr;
-  }
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 
 
   .overlay-title {

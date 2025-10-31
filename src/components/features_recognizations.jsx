@@ -17,7 +17,6 @@ const FeaturesRecognitions = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Move to next set of 4 images every 2 seconds
       setCurrentIndex((prevIndex) => (prevIndex + 4) % features.length);
     }, 3000);
     return () => clearInterval(interval);
@@ -25,7 +24,6 @@ const FeaturesRecognitions = () => {
 
   const visibleFeatures = features.slice(currentIndex, currentIndex + 4);
 
-  // Handle looping back when slice end exceeds array length
   const displayFeatures =
     visibleFeatures.length < 4
       ? [...visibleFeatures, ...features.slice(0, 4 - visibleFeatures.length)]

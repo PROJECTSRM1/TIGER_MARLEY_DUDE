@@ -1,25 +1,34 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./productCategories.css";
 import geekImage from "../assets/geek.jpg";
 import animeImage from "../assets/anime.jpg";
 import sportImage from "../assets/sport.jpg";
 
 const ProductCategories = () => {
+  const navigate = useNavigate();
+
   const categories = [
     {
-      title: "GEEK",
       image: geekImage,
-      buttons: ["T-SHIRT", "HOODIE"],
+      buttons: [
+        { label: "T-SHIRT", path: "/geek/tshirts" },
+        { label: "HOODIE", path: "/geek/hoodies" },
+      ],
     },
     {
-      title: "ANIME",
       image: animeImage,
-      buttons: ["OVERSIZED", "HOODIE"],
+      buttons: [
+        { label: "OVERSIZED", path: "" },///anime/oversized
+        { label: "HOODIE", path: "" }, ///anime/oversized
+      ],
     },
     {
-      title: "SPORT",
       image: sportImage,
-      buttons: ["OVERSIZED", "HOODIE"],
+      buttons: [
+        { label: "OVERSIZED", path: "" },
+        { label: "HOODIE", path: "" },
+      ],
     },
   ];
 
@@ -34,8 +43,12 @@ const ProductCategories = () => {
             </div>
             <div className="button-row">
               {cat.buttons.map((btn, i) => (
-                <button key={i} className="category-btn">
-                  {btn} &gt;
+                <button
+                  key={i}
+                  className="category-btn"
+                  onClick={() => navigate(btn.path)}
+                >
+                  {btn.label} &gt;
                 </button>
               ))}
             </div>

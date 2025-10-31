@@ -16,7 +16,7 @@
 .red-underline {
   width: 80px;
   height: 3px;
-  background-color: #e30613; /* red underline */
+  background-color: #e30613;
   margin: 0 auto 10px auto;
   border-radius: 5px;
 }
