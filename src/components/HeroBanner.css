@@ -1,0 +1,32 @@
+
+.top-offer-bar {
+  background-color: #b11111; 
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+  height: 25px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.top-offer-bar p {
+  margin: 0;
+}
+
+.highlight-number {
+  color: #00ffff; 
+}
+
+.highlight-offer {
+  color: #ffeb3b; 
+
+  font-weight: 700;
+}
+
+.highlight-code {
+  color: #ffeb3b; 
+  font-weight: 800;
+  margin-left: 2px;
+}
