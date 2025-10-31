@@ -1,0 +1,71 @@
+.settings-page {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.settings-page h1 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.settings-page p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.settings-section {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 4px solid #dd2476;
+}
+
+.settings-section h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 500;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  margin-top: 6px;
+  transition: 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #dd2476;
+  box-shadow: 0 0 6px rgba(221, 36, 118, 0.2);
+}
+
+.save-btn {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(221, 36, 118, 0.3);
+}
