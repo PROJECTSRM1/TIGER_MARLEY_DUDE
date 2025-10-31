@@ -22,17 +22,38 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build React app (ignore warnings)
-        run: CI=false npm run build
+        run: |
+          # Detect if project uses Vite or CRA and build accordingly
+          if [ -f "vite.config.js" ]; then
+            echo "Vite project detected"
+            CI=false npm run build
+          else
+            echo "Create React App project detected"
+            CI=false npm run build
+          fi
+
+      - name: Determine build folder
+        id: detect-build-folder
+        run: |
+          if [ -d "dist" ]; then
+            echo "folder=dist" >> $GITHUB_OUTPUT
+          elif [ -d "build" ]; then
+            echo "folder=build" >> $GITHUB_OUTPUT
+          else
+            echo "❌ No build folder found"
+            exit 1
+          fi
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: dist
+          path: ${{ steps.detect-build-folder.outputs.folder }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'TIGERDUDE'  
+          app-name: 'TIGERDUDE'  # 👈 Your Azure App Service name
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: ./build
+          package: ./${{ steps.detect-build-folder.outputs.folder }}
+
