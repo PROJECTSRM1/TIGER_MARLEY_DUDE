@@ -1,0 +1,96 @@
+.sidebar {
+  width: 230px;
+  background: linear-gradient(180deg, #2a2a3b, #1e1e2f);
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+}
+
+.sidebar-logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f9f6f5;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar-menu li {
+  margin-bottom: 18px;
+}
+
+.sidebar-menu a {
+  display: block;
+  color: #d1d1d1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(221, 36, 118, 0.15);
+  color: #ff8da1;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+
+.sidebar-menu a.active {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(221, 36, 118, 0.4);
+}
+
+/* Existing styles from before remain unchanged */
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.sidebar-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.sidebar-btn:hover {
+  background: linear-gradient(90deg, #00e5ff, #0072ff);
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.sidebar-btn.logout {
+  background: rgba(255, 77, 77, 0.15);
+  color: #ff7777;
+}
+
+.sidebar-btn.logout:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  color: #fff;
+  transform: translateX(5px);
+}
