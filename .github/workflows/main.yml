@@ -13,47 +13,31 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '18'
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Build React app (ignore warnings)
+      - name: Clean install dependencies
         run: |
-          # Detect if project uses Vite or CRA and build accordingly
-          if [ -f "vite.config.js" ]; then
-            echo "Vite project detected"
-            CI=false npm run build
-          else
-            echo "Create React App project detected"
-            CI=false npm run build
-          fi
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps
+          npm install ajv@6 ajv-keywords@3 --save-dev --legacy-peer-deps
 
-      - name: Determine build folder
-        id: detect-build-folder
-        run: |
-          if [ -d "dist" ]; then
-            echo "folder=dist" >> $GITHUB_OUTPUT
-          elif [ -d "build" ]; then
-            echo "folder=build" >> $GITHUB_OUTPUT
-          else
-            echo "❌ No build folder found"
-            exit 1
-          fi
+      - name: Build React App
+        run: npm run build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: ${{ steps.detect-build-folder.outputs.folder }}
+          path: build
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'TIGERDUDE'  # 👈 Your Azure App Service name
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: ./${{ steps.detect-build-folder.outputs.folder }}
+          app-name: TIGERDUDE
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: build
+
 
