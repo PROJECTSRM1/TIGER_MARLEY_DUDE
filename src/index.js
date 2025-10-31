@@ -9,8 +9,4 @@ root.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
-
 );
-=======
-);
- origin/main
