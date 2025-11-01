@@ -1,17 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { geekTshirts } from "../data/products";
 
 const categories = [
   { key: "shop-all", label: "SHOP ALL", img: "/images/categories/all.png" },
-  
   { key: "t-shirts", label: "T-SHIRTS", img: "/images/categories/tshirts.png" },
   { key: "hoodies", label: "HOODIES", img: "/images/categories/hoodies.png" },
   { key: "oversized", label: "OVERSIZED", img: "/images/categories/oversized.png" },
   { key: "full-sleeve", label: "SLEEVES", img: "/images/categories/sleeves.png" },
-  { key: "kids", label: "Kids", img: "/images/categories/kids.png" }
+  { key: "kids", label: "KIDS", img: "/images/categories/kids.png" },
 ];
 
 const GeekTshirts = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (key) => {
+    if (key === "shop-all") navigate("/");
+    else navigate(`/${key}`);
+  };
+
   return (
     <div style={{ textAlign: "center", padding: "40px" }}>
       {/* Banner Image */}
@@ -42,6 +49,7 @@ const GeekTshirts = () => {
         {categories.map((cat) => (
           <div
             key={cat.key}
+            onClick={() => handleCategoryClick(cat.key)}
             style={{
               display: "flex",
               alignItems: "center",
@@ -73,7 +81,7 @@ const GeekTshirts = () => {
         ))}
       </div>
 
-      {/* Products Grid */}
+      {/* Default Products Grid (for main page) */}
       <div
         style={{
           display: "flex",
