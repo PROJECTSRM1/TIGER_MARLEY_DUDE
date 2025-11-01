@@ -19,15 +19,15 @@ const ProductCategories = () => {
     {
       image: animeImage,
       buttons: [
-        { label: "OVERSIZED", path: "" },///anime/oversized
-        { label: "HOODIE", path: "" }, ///anime/oversized
+        { label: "OVERSIZED", path: "/anime/oversized" },
+        { label: "HOODIE", path: "/anime/hoodies" },
       ],
     },
     {
       image: sportImage,
       buttons: [
-        { label: "OVERSIZED", path: "" },
-        { label: "HOODIE", path: "" },
+        { label: "OVERSIZED", path: "/sport/oversized" },
+        { label: "HOODIE", path: "/sport/hoodies" },
       ],
     },
   ];

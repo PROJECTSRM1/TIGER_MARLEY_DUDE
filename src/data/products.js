@@ -18,7 +18,7 @@ export const geekTshirts = [
 
 ];  
 
-
+// Geek Hoodies
 export const geekHoodies = [
   {
     id: 1,
@@ -143,22 +143,65 @@ export const geekHoodies = [
 ];
 
 
+// Anime Oversized
 export const animeOversized = [
-  { id: 1, title: "Naruto Oversized", image: "/assets/naruto.jpg", price: 1299 },
-  { id: 2, title: "Dragon Ball Oversized", image: "/assets/dragonball.jpg", price: 1399 },
+  { id: 1, title: "Akatsuki Black Unisex Oversized T-Shirt", image:"/assets/228.png", price: 1299 },
+  { id: 2, title: "Sharingan Navy Unisex Oversized T-Shirt", image: "/assets/29.png", price: 599 },
+  { id: 3, title: "Naruto Vs. Pain White Unisex Oversized T-Shirt", image: "/assets/775.png", price: 599 },
+  { id: 4, title: "Luffy Taupe Unisex Oversized T-Shirt", image: "/assets/443.png", price: 1399 },
+  { id: 5, title: "AOT Eren Yeager Black Unisex Oversized T-Shirt", image: "/assets/66_be6a4a3c-5914-468b-8c22-a6785135c9bb.png", price: 1399 },
+  { id: 6, title: "Demon Slayer Trio Taupe Unisex Oversized T-Shirt", image: "/assets/93.png", price: 599 },
+  { id: 7, title: "Nine Tails Chakra Mode Taupe Unisex Oversized T-Shirt", image: "/assets/220.png", price: 1299 },
+  { id: 8, title: "Itachi of the Sharingan Unisex Oversized T-Shirt", image: "/assets/59.png", price: 599 },
+  { id: 9, title: "Gengar Ghost Type White Unisex Oversized T-Shirt", image: "/assets/49.png", price: 1399 },
+  { id: 10, title: "One Piece Kaido Navy Unisex Oversized T-Shirt", image: "/assets/66_be6a4a3c-5914-468b-8c22-a6785135c9bb.png", price: 1399 },
+
+
 ];
 
+// Anime Hoodies
 export const animeHoodies = [
-  { id: 1, title: "One Piece Hoodie", image: "/assets/onepiece.jpg", price: 1599 },
-  { id: 2, title: "Attack on Titan Hoodie", image: "/assets/aot.jpg", price: 1699 },
+  { id: 1, title: "Solo Leveling Betrayed Anime Hoodie", image: "/assets/Solo Leveling Betrayed Anime Hoodie.png", price: 1599 },
+  { id: 2, title: "Asta Black Clover Anime Hoodie", image: "/assets/Asta Black Clover Anime Hoodie.png", price: 1699 },
+  { id: 3, title: "Solo Leveling Unisex Anime Hoodie", image: "/assets/Solo Leveling Unisex Anime Hoodie.png", price: 1699 },
+  { id: 4, title: "Solo leveling Sung Jin Woo Anime Hoodie", image: "/assets/Solo leveling Sung Jin Woo Anime Hoodie.png", price: 1599 },
+  { id: 5, title: "Sung Jin-woo Anime White Hoodie", image: "/assets/Sung Jin-woo Anime White Hoodie.png", price: 1799 },
+  { id: 6, title: "Yuta Okkotsu Black Hoodie", image: "/assets/Yuta Okkotsu Black Hoodie.png", price: 1699 },
+  { id: 7, title: "Sung Jin-Woo Unisex Anime Hoodie", image: "/assets/Sung Jin-Woo Unisex Anime Hoodie.png", price: 1899 },
+  { id: 8, title: "AOT Eren Yeager Black Unisex Hoodie", image: "/assets/AOT Eren Yeager Black Unisex Hoodie.png", price: 1999 },
+  { id: 9, title: "Ora Ora Gojo Navy Unisex Anime Hoodie", image: "/assets/Ora Ora Gojo Navy Unisex Anime Hoodie.png", price: 1699 },
+  { id: 10, title: "Luffy Gear 5 Black Unisex Anime Hoodie", image: "/assets/Luffy Gear 5 Black Unisex Anime Hoodie.png", price: 1399 },
+  { id: 11, title: "Tokyo Revengers Black Unisex Anime Hoodie DTF Print", image: "/assets/Tokyo Revengers Black Unisex Anime Hoodie DTF Print.png", price: 1599 },
+  { id: 12, title: "Ghost of Uchiha Navy Unisex Hoodie", image: "/assets/Ghost of Uchiha Navy Unisex Hoodie.png", price: 1799 },
+
 ];
 
+// Sport Oversized
 export const sportOversized = [
-  { id: 1, title: "Football Fan Oversized", image: "/assets/footballoversized.jpg", price: 1099 },
-  { id: 2, title: "Basketball Legends Oversized", image: "/assets/basketballoversized.jpg", price: 1199 },
+  { id: 1, title: "Red Bull Gives You Wings - Oversized T-Shirt Motorsport Edition", image: "/assets/4.1-1.png", price: 1099 },
+  { id: 2, title: "Motorsport Oversized T-Shirt White Limited Edition", image:"/assets/Motorsport Oversized T-Shirt White Limited Edition.png", price: 1199 },
+  { id: 3, title: "Motorsport Edition - Club Black Oversized T-Shirt", image:"/assets/Motorsport Edition - Club Black Oversized T-Shirt.png", price: 1299 },
+  { id: 4, title: "MCL39 Motorsport Oversized T-Shirt Limited Edition", image:"/assets/MCL39 Motorsport Oversized T-Shirt Limited Edition.png", price: 1199 },
+  { id: 5, title: "Max Verstappen 2021 World Champion Black Motorsport Oversized T-Shirt", image:"/assets/Max Verstappen 2021 World Champion Black Motorsport Oversized T-Shirt.png", price: 1099 },
+  { id: 6, title: "Charles Leclerc Unisex Motorsport Oversized T-Shirt", image:"/assets/Charles Leclerc Unisex Motorsport Oversized T-Shirt.png", price: 1399 },
+  { id: 7, title: "Tribute to Chadwick Unisex Motorsport Oversized T-shirt", image:"/assets/Tribute to Chadwick Unisex Motorsport Oversized T-shirt.png", price: 1399 },
+  { id: 8, title: "Motorsport Oversized T-Shirt - Navy & White", image:"/assets/Motorsport Oversized T-Shirt White Limited Edition.png", price: 1099 },
+  { id: 9, title: "Still We rise Unisex Motorsport Oversized T-Shirt", image:"/assets/Still We rise Unisex Motorsport Oversized T-Shirt.png", price: 1199 },
+  { id: 10, title: "Enzo Unisex Motorsport Oversized T-Shirt", image:"/assets/Enzo Unisex Motorsport Oversized T-Shirt.png", price: 1299 },
+
 ];
 
+// Sport Hoodies
 export const sportHoodies = [
-  { id: 1, title: "Racing Motorsport Hoodie", image: "/assets/racinghoodie.jpg", price: 1599 },
-  { id: 2, title: "Champion Hoodie", image: "/assets/championhoodie.jpg", price: 1499 },
+  { id: 1, title: "Ajith Kumar Racing Motorsport Fan Hoodie", image: "/assets/Ajith Kumar Racing Motorsport Fan Hoodie.png", price: 999 },
+  { id: 2, title: "Ajith Kumar Car Racing Motorsport Hoodie", image: "/assets/Ajith Kumar Car Racing Motorsport Hoodie.jpg", price: 1099 },
+  { id: 3, title: "Motorsport Hoodie White Limited Edition", image: "/assets/Motorsport Hoodie White Limited Edition.jpg", price: 999 },
+  { id: 4, title: "Charles Motorsport Hoodie Limited Edition", image: "/assets/Charles Motorsport Hoodie Limited Edition.jpg", price: 999 },
+  { id: 5, title: "Red Bull Gives You Wings - Motorsport Hoodie", image: "/assets/Red Bull Gives You Wings - Motorsport Hoodie.jpg", price: 1099 },
+  { id: 6, title: "McLaren Club Black Hoodie – Limited Edition Motorsport", image: "/assets/McLaren Club Black Hoodie – Limited Edition Motorsport.jpg", price: 1199 },
+  { id: 7, title: "LN4 Norris Limited Edition Motorsport Hoodie", image: "/assets/LN4 Norris Limited Edition Motorsport Hoodie.jpg", price: 999 },
+  { id: 8, title: "14 Fernando Alonso Unisex Motorsport Hoodie", image: "/assets/14 Fernando Alonso Unisex Motorsport Hoodie.jpg", price: 999 },
+  { id: 9, title: "Lewis Hamilton Motorsport Red Hoodie", image: "/assets/Lewis Hamilton Motorsport Red Hoodie.jpg", price: 999 },
+  { id: 10, title: "Customized Ajith Kumar Racing Hoodie", image: "/assets/Customized Ajith Kumar Racing Hoodie.jpg", price: 1199 },
+
 ];
